@@ -7,7 +7,6 @@ const cors = require("cors")
 const mongoSanitize = require('express-mongo-sanitize');
 
 
-
 const app = new express();
 
 
@@ -46,6 +45,14 @@ app.use(mongoSanitize())
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+
+// import router
+
+
+const routes = require("./src/routes/api");
+
+app.use("/api/v1", routes);
 
 
 
