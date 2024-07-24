@@ -47,5 +47,5 @@ const DeathDetailSchema = new Schema({
 },{timestamps: true, versionKey: false});
 
 
-const deathDetails = model("deathDetails",DeathDetailSchema);
+const deathDetails = model("deathDetail",DeathDetailSchema);
 module.exports = deathDetails;
